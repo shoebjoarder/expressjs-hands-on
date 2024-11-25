@@ -22,8 +22,12 @@ const userSchema = new Schema({
     default: Date.now(),
   },
   // * Task 1: Continues here from todo-model.js (A)
-
-  
+  todos: [
+    {
+      type: ObjectId,
+      ref: "Todo",
+    },
+  ],
   // * Task 1: Ends here
 });
 

@@ -34,8 +34,12 @@ userRouter.delete("/:username", authentication, userController.deleteUser);
 // * Task 2.3: Continues from logger-middleware.js (A)
 
 // * Task 2.1: Starts here
-
-
+userRouter.post(
+  "/:username/todos/create",
+  requestLogger,
+  authentication,
+  todoController.createTodo
+);
 // * Task 2.1: Ends here
 
 // * Task 2.3: Ends here
@@ -44,24 +48,36 @@ userRouter.delete("/:username", authentication, userController.deleteUser);
 // * Get all user todos route
 // * ************************************************
 // * Task 3.1: Starts here
-
-
+userRouter.get(
+  "/:username/todos",
+  requestLogger,
+  authentication,
+  todoController.getAllUserTodos
+);
 // * Task 3.1: Ends here
 
 // * ************************************************
 // * Mark todo as either completed or not completed route
 // * ************************************************
 // * Task 4.1: Starts here
-
-
+userRouter.put(
+  "/:username/todos/:todoId/:completed",
+  requestLogger,
+  authentication,
+  todoController.toggleUpdateTodoComplete
+);
 // * Task 4.1: Ends here
 
 // * ************************************************
 // * Delete a todo route
 // * ************************************************
 // * Task 5.1: Starts here
-
-
+userRouter.delete(
+  "/:username/todos/:todoId/",
+  requestLogger,
+  authentication,
+  todoController.deleteTodo
+);
 // * Task 5.1: Ends here
 
 module.exports = userRouter;

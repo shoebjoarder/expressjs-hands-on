@@ -34,7 +34,7 @@ Download and install the following software:
 - In VSCode, click the `Terminal` menu from the top menu and click `New Terminal`.
 - Switch between branches to view the different topics. Type `git checkout <branch_name>` in the terminal to switch between the branches. Remember to replace `<branch_name>` with the actual branch name, e.g.,
   ```bash
-  git checkout 1-expressjs-hands-on-template
+  git checkout 2-expressjs-hands-on-fullcode
   ```
 - Open the terminal and type the following command to install the node packages.
   ```bash
